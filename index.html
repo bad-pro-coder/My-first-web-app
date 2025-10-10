@@ -2,12 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My first Web App</title>
+    <title>Random Web App</title>
     <link rel="manifest" href="manifest.json">
+	  <style>body{
+		background-color: black;
+		color: white;
+	  	}h1{
+			text-align: center;
+	  	}</style>
   </head>
   <body>
-    <h1>Hello from My App!</h1>
-    <p>(obviously not complete yet, I haven't even added css yet)</p>
+    <h1>Welcome!</h1>
+    <p>This is my first web app!</p>
     <script>
       // Register service worker (required for install)
       if ("serviceWorker" in navigator) {
@@ -55,4 +61,5 @@
 
   </body>
 </html>
+
 
