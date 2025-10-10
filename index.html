@@ -2,51 +2,51 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Standalone App</title>
+    <title>My first Web App</title>
     <link rel="manifest" href="manifest.json">
   </head>
   <body>
     <h1>Hello from My App!</h1>
-    <p>This app runs in its own window.</p>
+    <p>(obviously not complete yet, I haven't even added css yet)</p>
     <script>
       // Register service worker (required for install)
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
       }
     </script>
 	<script>
   let deferredPrompt;
 
   // Listen for the event when app becomes installable
-  window.addEventListener('beforeinstallprompt', (e) => {
+  window.addEventListener("beforeinstallprompt", (e) => {
     // Prevent Chrome from showing the default mini-infobar
     e.preventDefault();
     deferredPrompt = e;
 
     // Create a custom "Install" button
-    const installButton = document.createElement('button');
-    installButton.textContent = 'Install MyApp';
-    installButton.style.position = 'fixed';
-    installButton.style.bottom = '20px';
-    installButton.style.right = '20px';
-    installButton.style.padding = '10px 15px';
-    installButton.style.fontSize = '16px';
-    installButton.style.borderRadius = '8px';
-    installButton.style.border = 'none';
-    installButton.style.background = '#0078ff';
-    installButton.style.color = 'white';
-    installButton.style.cursor = 'pointer';
+    const installButton = document.createElement("button");
+    installButton.textContent = "Install The App";
+    installButton.style.position = "fixed";
+    installButton.style.bottom = "20px";
+    installButton.style.right = "20px";
+    installButton.style.padding = "10px 15px";
+    installButton.style.fontSize = "16px";
+    installButton.style.borderRadius = "8px";
+    installButton.style.border = "none";
+    installButton.style.background = "#0078ff";
+    installButton.style.color = "white";
+    installButton.style.cursor = "pointer";
     document.body.appendChild(installButton);
 
     // When user clicks the button, show the install prompt
-    installButton.addEventListener('click', async () => {
+    installButton.addEventListener("click", async () => {
       installButton.remove();
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
+      if (outcome === "accepted") {
+        console.log("User accepted the install prompt");
       } else {
-        console.log('User dismissed the install prompt');
+        console.log("User dismissed the install prompt");
       }
       deferredPrompt = null;
     });
@@ -55,3 +55,4 @@
 
   </body>
 </html>
+
