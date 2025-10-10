@@ -1,5 +1,5 @@
 {
-  "name": "My Standalone App",
+  "name": "Web App",
   "short_name": "MyApp",
   "start_url": "index.html",
   "display": "standalone",
@@ -13,4 +13,5 @@
     }
   ]
 }
+
 
