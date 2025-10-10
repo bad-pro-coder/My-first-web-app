@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Standalone App</title>
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <h1>Hello from My App!</h1>
+    <p>This app runs in its own window.</p>
+    <script>
+      // Register service worker (required for install)
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+  </body>
+</html>
