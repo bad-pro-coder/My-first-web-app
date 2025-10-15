@@ -1,6 +1,6 @@
 {
-  "name": "Web App",
-  "short_name": "MyApp",
+  "name": "Legit App",
+  "short_name": "legitApp",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -13,6 +13,7 @@
     }
   ]
 }
+
 
 
 
